@@ -1,0 +1,520 @@
+/* normalize & main */
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: Montserrat, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.main_area,
+.nav__menu {
+    -moz-user-select: none;
+    user-select: none;
+}
+
+/* nav bar */
+.nav {
+    z-index: 2;
+    background: rgba(0, 0, 0, .4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+    transition: all .25s;
+}
+
+.nav:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.nav__phone {
+    letter-spacing: 1px;
+    float: left;
+    color: #fff;
+    font-size: 22px;
+    line-height: 80px;
+    padding: 0 0 0 6em;
+}
+
+.nav__phone a {
+    color: white;
+}
+
+.nav__menu {
+    float: right;
+    line-height: 50px;
+    margin: 0 6em;
+}
+
+.nav__item {
+    display: inline-block;
+}
+
+.nav__item a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: lighter;
+    padding: 20px;
+    transition: color .2s;
+}
+
+.nav__item a:hover {
+    background: rgba(255, 255, 255, .4);
+    color: #000;
+    border: 1px solid #000;
+}
+
+.phone {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+.nav__logo {
+    display: inline-block;
+}
+
+.nav__logo img {
+    margin-top: 15px;
+    margin-left: 5px;
+    height: 45px;
+    width: 45px;
+}
+
+/* main */
+.main_area {
+    box-sizing: border-box;
+    display: inline-block;
+    height: 100vh;
+    width: 100%;
+    background-image: url("../img/iveco-blur.jpg");
+    background-position: top left;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    vertical-align: center;
+}
+
+.main_area h1 {
+    padding-top: 25vh;
+    color: #fff;
+    font-size: 60px;
+    font-weight: 400;
+}
+
+.main_area p {
+    color: #fff;
+    font-size: 30px;
+    font-weight: lighter;
+}
+
+/* about */
+.feedback__openable {
+    visibility: hidden;
+}
+
+.about {
+    display: block;
+    position: relative;
+    clear: both;
+    height: 80vh;
+}
+
+.about.flex:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/wheels.jpg') no-repeat center center;
+    opacity: .3;
+}
+
+.about__wrapper {
+    padding-top: 40px;
+}
+
+.about__container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.about__item {
+    display: flex;
+    flex-direction: column;
+}
+
+.about__item-container {
+    text-align: center;
+}
+
+.about__item {
+    margin: 8px;
+    flex: 25%;
+    border: rgb(139, 183, 240) solid 2px;
+    border-top: none;
+    max-width: 300px;
+}
+
+.about__item-container.text {
+    font-weight: bold;
+    margin: 20px;
+}
+
+.about__why-we {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.about__we-container {
+    z-index: 5;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0 30px 0 30px;
+}
+
+.about__we-container p {
+    text-align: center;
+    margin-top: -10px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: none;
+}
+
+.about__we-img {
+    height: 70px;
+    width: 70px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* footer */
+.footer {
+    position: relative;
+    width: 100%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    text-align: center;
+    background: #D5D5D5;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    text-align: center;
+}
+
+.social__item {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.social__img {
+    height: 50px;
+    width: 50px;
+}
+
+.feedback {
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.feedback input,
+.feedback__submit {
+    width: 20%;
+    margin-right: 30px;
+    color: #000000;
+    border: 1px solid #000000;
+    height: 50px;
+    padding: 0 18px;
+    font-size: 16px;
+    line-height: 1.33;
+}
+
+.feedback__submit {
+    background: rgb(113, 144, 186);
+    color: #fff;
+}
+
+.feedback__submit:hover {
+    cursor: pointer;
+    background: #4C72BA;
+}
+
+.feedback h3 {
+    margin-top: -15px;
+    font-weight: lighter;
+}
+
+/* responsibility */
+.nav.opacity {
+    background: rgb(31, 50, 65);
+}
+
+#feedback {
+    padding-top: 80px;
+    margin-top: -80px;
+    -webkit-background-clip: content-box;
+    background-clip: content-box;
+}
+
+.nav__burger {
+    display: none;
+}
+
+/* adaptation */
+/*
+    iPad
+    Galaxy Tab
+    & other
+ */
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        max-width: 100vw;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: 80px;
+        max-width: 100%;
+    }
+
+    .nav__phone {
+        padding: 0 0 0 30px;
+    }
+
+    .nav li {
+        display: block;
+        margin: 0 0 -10px 0;
+    }
+
+    .nav__item a {
+        border: none;
+        background: none;
+        padding: 0;
+    }
+
+    .nav__list {
+        text-align: center;
+        padding-inline-start: 0;
+    }
+
+    .nav__menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        padding: 70px 0 0 0;
+        margin: 0;
+        transition: all .3s ease 0s;
+    }
+
+    .nav__menu.active {
+        top: -50px;
+        background: rgb(31, 50, 65);
+    }
+
+    .nav__burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        left: 0;
+        top: 30px;
+        z-index: 50;
+        margin-left: auto;
+        margin-right: 15px;
+    }
+
+    .nav__burger:before,
+    .nav__burger:after {
+        content: '';
+        background-color: #fff;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all .3s ease 0s;
+    }
+
+    .nav__burger:before {
+        top: 0;
+    }
+
+    .nav__burger:before {
+        top: 20px;
+    }
+
+    .nav__burger span {
+        position: absolute;
+        background-color: #fff;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 10px;
+        transition: all .3s ease 0s;
+    }
+
+    .nav__burger.active:before {
+        transform: rotate(45deg);
+        top: 10px;
+    }
+
+    .nav__burger.active:after {
+        transform: rotate(-45deg);
+        top: 10px;
+    }
+
+    .nav__burger.active span {
+        transform: scale(0);
+    }
+
+    .about__container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .about__volume,
+    .about__length {
+        order: revert;
+
+    }
+
+    .about__item {
+        flex-basis: 40%;
+        margin: 10px;
+    }
+
+    .about__wrapper {
+        padding-top: 0;
+    }
+}
+
+/*
+ iPhone
+ Android
+ */
+@media screen and (max-width: 576px) {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+    }
+
+    .nav {
+        height: 50px;
+    }
+
+    .nav__logo img {
+        margin-top: 10px;
+        margin-left: 1px;
+        height: 30px;
+        width: 30px;
+    }
+
+    .nav__phone {
+        margin-top: -15px;
+        padding: 0 0 0 10px;
+        font-size: 16px;
+    }
+
+    .nav__burger {
+        top: 15px;
+    }
+
+    .main_area h1 {
+        font-size: 40px;
+    }
+
+    .main_area p {
+        font-size: 20px;
+    }
+
+    .feedback__openable {
+        visibility: visible;
+    }
+
+    .about {
+        height: 100%;
+    }
+
+    .about__container {
+        margin-top: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about__item {
+        width: 60vw;
+        margin-bottom: 40px;
+    }
+
+    .about__why-we {
+        margin-top: 10px;
+        flex-direction: column;
+    }
+
+    .footer {
+        flex: 0 0 auto;
+    }
+
+    .feedback {
+        display: none;
+    }
+
+    .feedback__content {
+        display: none;
+    }
+
+    .feedback__openable {
+        font-family: 'Helvetica', 'Arial', sans-serif;
+        display: inline-block;
+        font-size: 1em;
+        padding: 1em 2em;
+        -webkit-appearance: none;
+        appearance: none;
+        background-color: #5bb4ff;
+        color: #fff;
+        cursor: pointer;
+        position: relative;
+        transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+        box-shadow: 0 2px 25px rgba(39, 197, 255, 0.5);
+    }
+
+    .about.flex:after {
+        background: url('../img/wheels.jpg') no-repeat top center;
+        background-size: cover;
+    }
+}
