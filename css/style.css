@@ -16,6 +16,10 @@ ul {
     list-style: none;
 }
 
+.wrapper {
+    width: 100vw;
+}
+
 .main_area,
 .nav__menu {
     -moz-user-select: none;
@@ -24,7 +28,7 @@ ul {
 
 /* nav bar */
 .nav {
-    z-index: 2;
+    z-index: 7;
     background: rgba(0, 0, 0, .4);
     position: fixed;
     top: 0;
@@ -131,9 +135,6 @@ ul {
 }
 
 /* about */
-.feedback__openable {
-    visibility: hidden;
-}
 
 .about {
     display: block;
@@ -297,9 +298,13 @@ ul {
     & other
  */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 860px) {
     .wrapper {
-        max-width: 100vw;
+        min-width: 100%;
+    }
+
+    .nav {
+        width: 100vw;
     }
 
     .nav {
@@ -400,6 +405,11 @@ ul {
         transform: scale(0);
     }
 
+    .about {
+        height: auto;
+        padding: 20px 0;
+    }
+
     .about__container {
         display: flex;
         justify-content: space-around;
@@ -409,7 +419,6 @@ ul {
     .about__volume,
     .about__length {
         order: revert;
-
     }
 
     .about__item {
@@ -419,6 +428,7 @@ ul {
 
     .about__wrapper {
         padding-top: 0;
+        max-width: 100vw;
     }
 }
 
@@ -426,11 +436,12 @@ ul {
  iPhone
  Android
  */
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 720px) {
     .wrapper {
         display: flex;
         flex-direction: column;
         min-height: 100%;
+        width: 100vw;
     }
 
     .nav {
@@ -491,26 +502,21 @@ ul {
     }
 
     .feedback {
-        display: none;
+        height: auto;
     }
 
     .feedback__content {
-        display: none;
+        padding-bottom: 20px;
     }
 
-    .feedback__openable {
-        font-family: 'Helvetica', 'Arial', sans-serif;
-        display: inline-block;
-        font-size: 1em;
-        padding: 1em 2em;
-        -webkit-appearance: none;
-        appearance: none;
-        background-color: #5bb4ff;
-        color: #fff;
-        cursor: pointer;
-        position: relative;
-        transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
-        box-shadow: 0 2px 25px rgba(39, 197, 255, 0.5);
+    .feedback__content input {
+        width: 70vw;
+        margin: 5px auto;
+    }
+
+    .feedback__submit {
+        margin: 10px auto;
+        width: 80vw;
     }
 
     .about.flex:after {

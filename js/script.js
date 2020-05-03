@@ -22,9 +22,6 @@ document.querySelectorAll('.nav__item-href')
         item.addEventListener('click', e => {
             $burger.classList.remove('active');
             $menu.classList.remove('active');
-            const hash = item.href.split('#')[1];
-            if (hash === 'feedback' && document.getElementById(hash).hidden)
-                document.getElementById(hash).hidden = false;
         })
     });
 
