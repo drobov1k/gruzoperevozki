@@ -1,9 +1,10 @@
 const SCROLL_HIDDEN_NAV_VALUE = 150;
-const REQUEST_URL_ADDRESS = '';
+const REQUEST_URL_ADDRESS = 'http://localhost:8081/api/feedback';
 
 let $el     = document.querySelector('.nav');
 let $burger = document.querySelector('.nav__burger');
 let $menu   = document.querySelector('.nav__menu');
+let $confirm   = document.querySelector('.feedback__submit');
 
 window.onscroll = () => {
     let has = $el.classList.contains('opacity');
@@ -24,6 +25,24 @@ document.querySelectorAll('.nav__item-href')
             $menu.classList.remove('active');
         })
     });
+
+$confirm.addEventListener('click', () => {
+    let name = document.getElementById('input__name').value;
+    let phone = document.getElementById('input__phone').value;
+
+    fetch(REQUEST_URL_ADDRESS, {
+       method: 'POST',
+        mode: 'cors',
+        cache: 'no-cache',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            name, phone
+        })
+    }).then(() => alert('Спасибо за заявку! В течении 10-ти минут с Вами свяжется менеджер.'))
+        .catch(/* handle err */);
+});
 
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     // код для мобильных устройств

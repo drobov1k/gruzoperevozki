@@ -72,6 +72,7 @@ ul {
 
 .nav__item {
     display: inline-block;
+    cursor: pointer;
 }
 
 .nav__item a {
@@ -263,6 +264,7 @@ ul {
 .feedback__submit {
     background: rgb(113, 144, 186);
     color: #fff;
+    z-index: 100;
 }
 
 .feedback__submit:hover {
@@ -523,4 +525,8 @@ ul {
         background: url('../img/wheels.jpg') no-repeat top center;
         background-size: cover;
     }
+}
+
+html {
+    overflow-x: hidden;
 }
