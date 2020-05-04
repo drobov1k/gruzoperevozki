@@ -1,16 +1,17 @@
 const SCROLL_HIDDEN_NAV_VALUE = 150;
 const REQUEST_URL_ADDRESS = 'https://gruzobot.herokuapp.com/api/feedback';
+// const REQUEST_URL_ADDRESS = 'http://localhost:8082/api/feedback';
 
-let $el     = document.querySelector('.nav');
+let $el = document.querySelector('.nav');
 let $burger = document.querySelector('.nav__burger');
-let $menu   = document.querySelector('.nav__menu');
-let $confirm   = document.querySelector('.feedback__submit');
+let $menu = document.querySelector('.nav__menu');
+let $confirm = document.querySelector('.feedback__submit');
 
 window.onscroll = () => {
     let has = $el.classList.contains('opacity');
     window.pageYOffset > SCROLL_HIDDEN_NAV_VALUE ?
-    has ? `` : $el.classList.add('opacity') :
-    has ? $el.classList.remove('opacity') : ``
+        has ? `` : $el.classList.add('opacity') :
+        has ? $el.classList.remove('opacity') : ``
 };
 
 $burger.addEventListener('click', () => {
@@ -31,9 +32,7 @@ $confirm.addEventListener('click', () => {
     let phone = document.getElementById('input__phone').value;
 
     fetch(REQUEST_URL_ADDRESS, {
-       method: 'POST',
-        mode: 'cors',
-        cache: 'no-cache',
+        method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
