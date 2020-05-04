@@ -41,8 +41,8 @@
         <div class="feedback__content">
             <h1>Заказать обратный звонок</h1>
             <h3>Ежедневно с 8:00 до 22:00</h3>
-            <input type="text" id="input__name" name="name" placeholder="имя">
-            <input type="tel" id="input__phone" placeholder="телефон">
+            <input pattern="\D{2,}" required type="text" id="input__name" name="name" placeholder="имя">
+            <input required type="tel" id="input__phone" placeholder="+375(__)___-__-__">
             <button class="feedback__submit" type="submit">Заказать</button>
         </div>
     </div>
@@ -151,6 +151,8 @@
     </div>
 </footer>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>

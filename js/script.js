@@ -1,3 +1,7 @@
+$(document).ready(function() {
+    $("#input__phone").mask("+375 (99) 999-99-99");
+});
+
 const SCROLL_HIDDEN_NAV_VALUE = 150;
 const REQUEST_URL_ADDRESS = 'https://gruzobot.herokuapp.com/api/feedback';
 // const REQUEST_URL_ADDRESS = 'http://localhost:8082/api/feedback';
@@ -30,6 +34,11 @@ document.querySelectorAll('.nav__item-href')
 $confirm.addEventListener('click', () => {
     let name = document.getElementById('input__name').value;
     let phone = document.getElementById('input__phone').value;
+
+    if (!name && !phone) {
+        alert('Пожалуйста, заполните все поля');
+        return false;
+    }
 
     fetch(REQUEST_URL_ADDRESS, {
         method: 'POST',
