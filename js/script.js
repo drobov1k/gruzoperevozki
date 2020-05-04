@@ -1,5 +1,5 @@
 const SCROLL_HIDDEN_NAV_VALUE = 150;
-const REQUEST_URL_ADDRESS = 'http://localhost:8081/api/feedback';
+const REQUEST_URL_ADDRESS = 'https://gruzobot.herokuapp.com/api/feedback';
 
 let $el     = document.querySelector('.nav');
 let $burger = document.querySelector('.nav__burger');
