@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     $("#input__phone").mask("+375 (99) 999-99-99");
 });
 
@@ -48,7 +48,11 @@ $confirm.addEventListener('click', () => {
         body: JSON.stringify({
             name, phone
         })
-    }).then(() => alert('Спасибо за заявку! В течении 10-ти минут с Вами свяжется менеджер.'))
+    }).then(() => {
+        document.getElementById('input__name').value = ''
+        document.getElementById('input__phone').value = ''
+        alert('Спасибо за заявку! В течении 10-ти минут с Вами свяжется менеджер.')
+    })
         .catch(/* handle err */);
 });
 
